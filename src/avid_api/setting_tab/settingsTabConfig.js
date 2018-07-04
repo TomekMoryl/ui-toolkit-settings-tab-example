@@ -1,11 +1,11 @@
+import UserSettings from './UserSettings';
 
 const settingsTabConfig = {
     config: {
-        path: [{index: 1, id: 'group1', displayName: 'Test App AVID'}, {id: 'subgroup1', displayName: 'Sub Group 1'}],
-        index: 1,
-        displayName: 'User Settings 1'
+        index: 202,
+        displayName: 'Test Tab AVID'
     },
-    factory() {
+    factory: () => {
         return new UserSettings();
     },
 };
