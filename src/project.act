@@ -1,0 +1,18 @@
+{
+  "identity": {
+    "description": "tomek",
+    "build": "2",
+    "version": "0.0.2"
+  },
+  "signing": {
+    "login": "tomek",
+    "developerID": "tomek",
+    "organization": "avid",
+    "privateKeyPath": "e:\\keys\\michael\\private.key"
+  },
+  "connection": {
+    "hostIp": "10.42.24.56",
+    "hostPort": "",
+    "proxyPort": "8080"
+  }
+}

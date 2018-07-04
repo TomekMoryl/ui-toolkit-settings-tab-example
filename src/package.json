@@ -1,0 +1,12 @@
+{
+  "identity": {
+    "appName": "testapptomekavid"
+  },
+  "main": "index.js",
+  "avid": {
+    "format": "amd",
+    "autoload": true,
+    "alias": "Tomek-Test-Appliaction-vuBo6ZtVToPNwl2LGDLusCsy0sfu6r7qr6KNEs2Dp",
+    "secret": "mTkf3Z+WZvv71TlptilpD7ovAKb1tcUaVlF7mlUM1Ws="
+  }
+}
