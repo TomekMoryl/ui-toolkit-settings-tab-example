@@ -2,10 +2,10 @@
  * Copyright 2017 by Avid Technology, Inc.
  */
 
-import ApplicationContainer from '../../app/index';
+import ApplicationContainer from '../../../app/index';
 
 // Need to be bcs it is used in main App :
-export default class ViewWrapper {
+export default class WorkFlowWrapper {
 
     createElement() {
         this.el = document.createElement('div');
