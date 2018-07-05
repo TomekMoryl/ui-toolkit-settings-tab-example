@@ -1,4 +1,4 @@
-import UserSettings from './UserSettings';
+import UserTabSettings from './UserTabSettings';
 
 const settingsTabConfig = {
     config: {
@@ -6,7 +6,7 @@ const settingsTabConfig = {
         displayName: 'Test Tab AVID'
     },
     factory: () => {
-        return new UserSettings();
+        return new UserTabSettings();
     },
 };
 

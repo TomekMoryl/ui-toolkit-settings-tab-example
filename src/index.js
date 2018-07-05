@@ -6,7 +6,7 @@ import appConfig from './package.json';
 
 import ViewConfig from './avid_api/view/ViewConfig';
 import AppEntry from './avid_api/entry/EntryConfig';
-import settingsTabEntry from './avid_api/setting_tab/settingsTabConfig'
+import settingsTabEntry from './avid_api/settings-tab/settingsTabConfig'
 
 export const avid = [
     {
@@ -28,10 +28,8 @@ export const avid = [
         create: () => AppEntry,
     },
     {
-        name: `${appConfig['identity']['appName']}-setting-tab`,
+        name: `${appConfig['identity']['appName']}-settings-tab`,
         provides: ['user-settings'],
         create: () => settingsTabEntry,
     },
-
-
 ];
