@@ -2,7 +2,7 @@ import UserTabSettings from './UserTabSettings';
 import appConfig from '../../package.json';
 
 
-const settingsTabConfig = {
+const settingsTabEntry = {
     config: {
         index: 202,
         displayName: appConfig['identity']['appName'],
@@ -12,4 +12,4 @@ const settingsTabConfig = {
     },
 };
 
-export default settingsTabConfig
+export default settingsTabEntry
