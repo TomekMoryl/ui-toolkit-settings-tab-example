@@ -1,17 +1,17 @@
 {
   "identity": {
-    "description": "tomek",
-    "build": "2",
-    "version": "0.0.2"
+    "description": "Test",
+    "build": "1",
+    "version": "0.0.1"
   },
   "signing": {
-    "login": "tomek",
-    "developerID": "tomek",
-    "organization": "avid",
-    "privateKeyPath": "e:\\keys\\michael\\private.key"
+    "login": "Test",
+    "developerID": "Avid",
+    "organization": "Avid",
+    "privateKeyPath": ""
   },
   "connection": {
-    "hostIp": "10.42.24.56",
+    "hostIp": "CloudUxHostIp",
     "hostPort": "",
     "proxyPort": "8080"
   }
