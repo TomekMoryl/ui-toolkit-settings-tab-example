@@ -6,8 +6,7 @@ import appConfig from './package.json';
 
 import ViewConfig from './avid_api/view/ViewConfig';
 import AppEntry from './avid_api/entry/EntryConfig';
-import settingsTabEntry from './avid_api/setting_tab/user-settings/settingsTabConfig'
-import workflowTabEntry from './avid_api/setting_tab/workflow/WorkFlowTabEntry'
+import settingsTabEntry from './avid_api/settings-tab/settingsTabEntry'
 
 export const avid = [
     {
@@ -28,16 +27,9 @@ export const avid = [
         provides: ['apps'],
         create: () => AppEntry,
     },
-
     {
-        name: `${appConfig['identity']['appName']}-setting-tab`,
+        name: `${appConfig['identity']['appName']}-settings-tab`,
         provides: ['user-settings'],
         create: () => settingsTabEntry,
     },
-    {
-        name: `${appConfig['identity']['appName']}-workflow`,
-        provides: ['workflow-settings'],
-        create: () => workflowTabEntry,
-    }
-
 ];
