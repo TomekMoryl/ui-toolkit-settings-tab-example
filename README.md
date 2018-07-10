@@ -1,4 +1,4 @@
-# Example Admin App
+# Example Settings Tab
 
 ## Introduction
 
