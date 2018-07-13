@@ -1,12 +1,12 @@
 {
   "identity": {
-    "appName": "Test Tab"
+    "appName": "Test-App"
   },
   "main": "index.js",
   "avid": {
     "format": "amd",
     "autoload": true,
-    "alias": "Avid-Application-Id",
+    "alias": "Avid-Application-ID",
     "secret": "Avid-Application-Secret"
   }
 }

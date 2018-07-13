@@ -1,17 +1,17 @@
 {
   "identity": {
-    "description": "Test",
+    "description": "Avid Test-Tab",
     "build": "1",
-    "version": "0.0.1"
+    "version": "1.0.0"
   },
   "signing": {
-    "login": "Test",
+    "login": "Avid",
     "developerID": "Avid",
     "organization": "Avid",
     "privateKeyPath": ""
   },
   "connection": {
-    "hostIp": "CloudUxHostIp",
+    "hostIp": "Cloud UX Host",
     "hostPort": "",
     "proxyPort": "8080"
   }

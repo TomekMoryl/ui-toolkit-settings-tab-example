@@ -6,7 +6,6 @@ import ApplicationContainer from '../../app/index';
 
 // Need to be bcs it is used in main App :
 export default class ViewWrapper {
-
     createElement() {
         this.el = document.createElement('div');
         return Promise.resolve(this.el);
