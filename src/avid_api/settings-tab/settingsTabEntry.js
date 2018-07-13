@@ -1,11 +1,9 @@
 import UserTabSettings from './UserTabSettings';
-import appConfig from '../../package.json';
-
 
 const settingsTabEntry = {
     config: {
         index: 202,
-        displayName: appConfig['identity']['appName'],
+        displayName: 'Test Tab AVID'
     },
     factory: () => {
         return new UserTabSettings();
