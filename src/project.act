@@ -1,18 +1,17 @@
 {
   "identity": {
-    "description": "Avid Test-Tab",
+    "description": "test",
     "build": "1",
-    "version": "1.0.0"
+    "version": "0.01"
   },
   "signing": {
-    "login": "Avid",
-    "developerID": "Avid",
-    "organization": "Avid",
+    "login": "",
+    "developerID": "",
+    "organization": "",
     "privateKeyPath": ""
   },
   "connection": {
     "hostIp": "10.42.24.56",
-    "hostPort": "",
     "proxyPort": "8080"
   }
 }

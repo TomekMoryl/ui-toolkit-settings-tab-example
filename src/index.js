@@ -6,8 +6,10 @@ import appConfig from './package.json';
 
 import ViewConfig from './avid_api/view/ViewConfig';
 import AppEntry from './avid_api/entry/EntryConfig';
-import settingsTabEntry from './avid_api/settings-tab/settingsTabConfig'
+import settingsTabEntry from './avid_api/settings-tab/settingsTabConfig';
 
+const isAdminApp = appConfig.avid.hasOwnProperty('mode') && appConfig.avid.mode[0] === 'admin';
+const providing = isAdminApp ? 'adminApps' : 'apps';
 export const avid = [
     {
         name: `${appConfig['identity']['appName']}-view`,
@@ -24,7 +26,7 @@ export const avid = [
     },
     {
         name: appConfig['identity']['appName'],
-        provides: ['apps'],
+        provides: [providing],
         create: () => AppEntry,
     },
     {

@@ -15,6 +15,33 @@ if (config.connection.hostPort && config.connection.hostPort.length > 0) {
     host = config.connection.hostIp;
 }
 
+function injectApp(req, res) {
+    request({
+        url: `https://${host}${req.originalUrl}`,
+        strictSSL: false,
+        json: true,
+        method: 'GET',
+        gzip: true,
+        credentials: 'include',
+        headers: req.headers
+    }, (err, response, body) => {
+        if(err){
+            console.error(err);
+            next();
+        }
+        else {
+            body.plugins.push({
+                folderName: config.identity.appName,
+                main: config.main,
+                avid: config.avid
+            });
+            res.setHeader('Content-Type', 'application/json');
+            res.send(JSON.stringify(body));
+            return;
+        }
+    });
+};
+
 module.exports = {
     // webpack-dev-server options
     publicPath: "/build/",
@@ -57,31 +84,14 @@ module.exports = {
         });
         // add local module to the list of plugins
         app.get(/\/apis\/avid\.plugins\.list;version=\d;realm=.+\/plugins/, (req, res, next) => {
-            if(req.query.mode === 'main'){
-                request({
-                    url: `https://${host}${req.originalUrl}`,
-                    strictSSL: false,
-                    json: true,
-                    method: 'GET',
-                    credentials: 'include',
-                    gzip: true,
-                    headers: req.headers
-                }, (err, response, body) => {
-                    if(err){
-                        console.error(err);
-                        next();
-                    }
-                    else {
-                        body.plugins.push({
-                            folderName: config.identity.appName,
-                            main: config.main,
-                            avid: config.avid
-                        });
-                        res.setHeader('Content-Type', 'application/json');
-                        res.send(JSON.stringify(body));
-                        return;
-                    }
-                });
+            const isAdminApp = (config.avid.hasOwnProperty('mode') && config.avid.mode[0] === 'admin');
+            const normal = !isAdminApp && req.query.mode === 'main';
+            const admin = isAdminApp && req.query.mode === 'admin';
+            if(admin){
+                injectApp(req, res);
+            }
+            else if (normal) {
+                injectApp(req, res);
             }
             else {
                 next();

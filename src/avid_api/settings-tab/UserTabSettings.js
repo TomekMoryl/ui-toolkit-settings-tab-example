@@ -1,25 +1,29 @@
-const {eventEmitter} = require('../../eventEmitter/EventEmitter');
+import ReactDOM from 'react-dom';
+import React from 'react';
+import {Provider} from 'react-redux';
+import 'tachyons';
+
+import rootSaga from '../../app/redux/saga/index';
+import PaneContainer from '../../app/containers/settingsTabView/SettingsTabMainPaneContainer';
+import {store, sagaMiddleware} from '../../app/store/store';
 
 
 export default class UserTabSettings {
+    // constructor() {
+    //     sagaMiddleware.run(rootSaga);
+    // }
+
     render({domElement}) {
-        let domEdit = document.createElement("div");
-        let inputField = document.createElement('input');
-        let button = document.createElement('button');
-        let buttonText = document.createTextNode('Apply');
-        let textNode = document.createTextNode('Enter new message ');
-        inputField.setAttribute('id', 'inputField');
-        button.addEventListener('click', function () {
-            eventEmitter.trigger('user-tab', document.getElementById('inputField').value);
-            console.log('tutaj ' + document.getElementById('inputField').value);
-        });
-        button.appendChild(buttonText);
-        domEdit.appendChild(textNode);
-        domEdit.appendChild(inputField);
-        domEdit.appendChild(button);
-        domElement.appendChild(domEdit);
-
-        return Promise.resolve(domElement);
+        this.el = domElement;
+        ReactDOM.render(
+            <Provider store={store}>
+                <PaneContainer/>
+            </Provider>,
+            domElement,
+        );
     }
-};
 
+    destroy() {
+        ReactDOM.unmountComponentAtNode(this.el);
+    }
+}

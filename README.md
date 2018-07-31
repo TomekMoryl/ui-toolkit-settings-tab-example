@@ -1,41 +1,31 @@
-# Example Settings Tab
+# MediaCentral UX Starter Kit
 
-## Introduction
+Starter kit for creating apps in MediaCentral
 
-This example show how can you use settings tab in CloudUx.
+## Getting started
 
-## Settings Tab
-To add settings tab follow [guide](http://developer.avid.com/mcux_ui_plugin/clux-api/settings/system-settings-api.html "Avid Developers").
-Settings tab allow you to put your application in **User Settings**.
-To see it just click on your avatar and select **User Settings**
+To proceed, run these commands in order:
 
-![Alt text](screenshots/menu-entry.png "package.json")
+- ```npm install```
+- ```npm start```
 
-In this example in your User Settings window you can see test **Test Tab**.
+Then load [https://localhost:8080/](https://localhost:8080/) in your browser. Your new starter app is listed at top.  Its icon is a box.
 
-![Alt text](screenshots/SettingsTab.png "package.json")
+## Customizing
 
-##### Change Tab
-If you want to change tab you can do it in
-[settingsTabEntry](src/avid_api/settings-tab/settingsTabEntry.js "Settings Tab").
-**index** will change positions of your tab, **displayName** will change
-displayed name of your tab.
+To change the icon, overwrite the **svg** file in the [src/images](src/images) folder.
 
-![Alt text](screenshots/settingsTabEntry.png "package.json")
+To change starter kit port check [proxyPort](src/project.act).
 
-If you want to change tab content you can do it in
-[UserTabSettings](src/avid_api/settings-tab/UserTabSettings.js "User Tab Settings").
-And add more html to **domElement**
+For more information on building apps for Cloud UX see [Avid's developer portal](http://developer.avid.com/).
 
-![Alt text](screenshots/UserTabSettings.png "package.json")
+## Publishing
+For publishing to Avid marketplace use out ready to go [tool](https://www.npmjs.com/package/mediacentral-publish).
 
-## Running the example
+WARNING!
 
-To run example you will need running MediaCentral CloudUX server. properties
-can we changed in [src/project.act](src/project.act "Project act").
-After you change hostIp in `project.act` you can run application.
-cli type:
-1. `npm install`
-2. `npm start`
-3. Go to your [localhost](https://127.0.0.1:8080/ "Localhost").
+Remember to set your [alias](src/package.json) and [secret](src/package.json). You can get them from [Avid Page](http://www.avid.com/)
+
+## Setup
+If you want to change name/host/port of the app just type ```npm run setup``` in your project's directory and proceed.
 
