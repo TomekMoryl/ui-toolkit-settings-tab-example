@@ -63,3 +63,6 @@ typings/
 .next
 
 .idea
+
+README.md
+package-lock.json
