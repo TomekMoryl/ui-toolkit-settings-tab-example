@@ -11,7 +11,7 @@ To see it just click on your avatar and select **User Settings**
 
 ![Alt text](screenshots/User-Settings-Main-View.png "User-Settings-Main-View")
 
-In this example in your User Settings window you can see test **Settings-Tab-Example**.
+In this example in your User Settings window you can see**Settings-Tab-Example**.
 
 ![Alt text](screenshots/Settings-Tab.png "Settings-Tab")
 
@@ -38,10 +38,11 @@ displayed name of your tab.
 
 ## Running the example
 
-To run example you will need running MediaCentral CloudUX server. properties
+To run example you will need Avid MediaCentral | Cloud UX server. Properties
 can we changed in [src/project.act](src/project.act "Project act").
 After you change hostIp in `project.act` you can run application.
-cli type:
+
+**from cli type:**
 1. `npm install`
 2. `npm start`
 3. Go to your [localhost](https://127.0.0.1:8080/ "Localhost").
