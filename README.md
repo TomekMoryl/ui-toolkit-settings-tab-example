@@ -26,10 +26,15 @@ displayed name of your tab.
 
 ![Alt text](screenshots/Settings-Tab-Entry.png "Settings-Tab-Entry")
 
-If you want to change Application you can do it in
+**If** you want to change Settings Tab you can do it in
 [UserTabSettings](src/avid_api/settings-tab/UserTabSettings.js "User Tab Settings").
 
-![Alt text](screenshots/User-Tab-Settings.png "package.json")
+![Alt text](screenshots/User-Tab-Settings.png "User-Tab-Settings")
+
+**If** you want to change Application you can do it in
+[Main View](src/app/indexMainView.jsx "User Tab Settings").
+
+![Alt text](screenshots/Main-View.png "Main-View")
 
 ## Running the example
 
