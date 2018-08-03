@@ -62,8 +62,6 @@ typings/
 # next.js build output
 .next
 
-testapptomekavid.tar.bz2
-package-lock.json
-build
 .idea
 
+package-lock.json
