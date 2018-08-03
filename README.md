@@ -45,5 +45,5 @@ After you change hostIp in `project.act` you can run application.
 **from cli type:**
 1. `npm install`
 2. `npm start`
-3. Go to your [localhost](https://127.0.0.1:8080/ "Localhost").
+3. Go to your [127.0.0.1:8080](https://127.0.0.1:8080/ "127.0.0.1:8080").
 
