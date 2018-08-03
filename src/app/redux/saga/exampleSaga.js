@@ -9,7 +9,6 @@ export function* getUserSettings() {
             yield take(actionTypes.USER_SETTINGS_GET);
             yield put({type: actionTypes.USER_SETTINGS_GET_PROGRESS});
             const response = yield request(GET, constants.USER_SETTINGS_GET_API_URI());
-            console.log(constants.USER_SETTINGS_GET_API_URI());
             yield put({type: actionTypes.USER_SETTINGS_GET_SUCCESS, payload: response.data.value});
         } catch (e) {
             console.error(e);

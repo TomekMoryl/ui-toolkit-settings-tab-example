@@ -1,6 +1,6 @@
 {
   "identity": {
-    "appName": "Admin-App"
+    "appName": "Settings-Tab-Example"
   },
   "main": "index.js",
   "avid": {

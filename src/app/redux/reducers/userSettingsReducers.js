@@ -1,11 +1,11 @@
 import actionTypes from '../actions/actionTypes';
 
 const DEFAULT_STATE = {
-    userSettings: [{
+    userSettings: {
         userMessage: 'To change this message go to settings tab',
         userMessageColor: '#ffffff',
         userMessageSize: '0.5vw',
-    }],
+    },
     downloadUserSettings: false,
 
 };
