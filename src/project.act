@@ -11,7 +11,8 @@
     "privateKeyPath": ""
   },
   "connection": {
-    "hostIp": "10.42.24.56",
+    "hostIp": "Cloud UX Host",
+    "hostPort": "",
     "proxyPort": "8080"
   }
 }
